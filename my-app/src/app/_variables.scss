@@ -1,19 +1,21 @@
 
 //Unit Measurements
-$unit-width-quarter: 1.38vw;
-$unit-width-icon: 2.25vw;
-$unit-width-half: 2.78vw;
 $unit-width-1: 5.56vw;
-$unit-width-2: 11.12vw;
-$unit-width-3: 16.68vw;
-$unit-width-4: 22.24vw;
-$unit-width-5: 27.8vw;
-$unit-width-6: 33.36vw;
-$unit-width-7: 38.92vw;
-$unit-width-8: 44.48vw;
-$unit-width-9: 50.04vw;
-$unit-width-10: 55.6vw;
-$unit-width-16: 88.96vw;
+$unit-width-quarter: $unit-width-1 / 4;
+$unit-width-icon: $unit-width-1 / 2.47;
+$unit-width-half: $unit-width-1 / 2;
+$unit-width-2: $unit-width-1 * 2;
+$unit-width-3: $unit-width-1 * 3;
+$unit-width-4: $unit-width-1 * 4;
+$unit-width-5: $unit-width-1 * 5;
+$unit-width-6: $unit-width-1 * 6;
+$unit-width-7: $unit-width-1 * 7;
+$unit-width-8: $unit-width-1 * 8;
+$unit-width-9: $unit-width-1 * 9;
+$unit-width-10: $unit-width-1 * 10;
+$unit-width-16: $unit-width-1 * 16;
+
+// $unit-width-1: 10vh;
 
 //Colours
 $platinum: #D0D9D4;

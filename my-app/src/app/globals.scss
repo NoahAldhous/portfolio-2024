@@ -20,6 +20,24 @@
 }
 
 body {
+
+  ::-webkit-scrollbar {
+    width: $unit-width-quarter;
+    z-index: 10;
+  }
+    ::-webkit-scrollbar-track {
+    background: $eggshell;
+    @include pixelBackground;
+  }
+    ::-webkit-scrollbar-thumb {
+    background: $battleship-grey;
+    @include pixelBackground;
+    
+  }
+
+  overflow-x: hidden;
+  overflow-y: hidden;
+  
   color: $black;
   // font-family: 'Noto';
   background-color: $platinum;
@@ -34,3 +52,5 @@ body {
     text-wrap: balance;
   }
 }
+
+
