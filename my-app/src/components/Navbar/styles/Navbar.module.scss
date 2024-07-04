@@ -1,0 +1,40 @@
+@use '../../../app/variables' as *;
+
+.navbar {
+    position: absolute;
+    height: $unit-width-1;
+    padding: 0 $unit-width-1;
+    width: 100vw;
+    background-color: $eggshell;
+    background-size: 4px 4px;
+    background-image: linear-gradient(90deg, transparent, transparent 3px, rgba(0,0,0,.07) 4px),
+    linear-gradient(transparent, transparent 3px, rgba(0,0,0,.07) 4px);
+    display: flex; 
+    justify-content: flex-end;
+    border-bottom: 4px solid $walnut-brown;
+
+    .buttonContainer {
+        width: $unit-width-8;
+        height: 100%;
+        // background-color: blue;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .navButton {
+            width: $unit-width-2;
+            height: $unit-width-half;
+            background-color: $battleship-grey;
+            background-size: 4px 4px;
+    background-image: linear-gradient(90deg, transparent, transparent 3px, rgba(0,0,0,.07) 4px),
+    linear-gradient(transparent, transparent 3px, rgba(0,0,0,.07) 4px);
+        }
+
+        .navIcon {
+            width: $unit-width-icon;
+            height: $unit-width-icon;
+            background-color: $battleship-grey;
+        }
+
+    }
+}

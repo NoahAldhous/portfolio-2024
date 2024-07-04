@@ -1,0 +1,9 @@
+@use './variables' as *;
+
+//TODO: move this into page container component for reuse!
+.main {
+    // background-color: red;
+    height: 100vh;
+    padding: $unit-width-1;
+    padding-top: $unit-width-2;
+}
