@@ -1,0 +1,12 @@
+@use '../../../app/variables' as *;
+
+.header {
+    height: $unit-width-1;
+    text-transform: uppercase;
+    // border: 1px solid black;
+    display: flex;
+    align-items: center;
+    font-size: $unit-width-1;
+    font-weight: 300;
+    text-shadow: .3rem .3rem 0 $battleship-grey;
+}

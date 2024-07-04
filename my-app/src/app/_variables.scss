@@ -12,6 +12,8 @@ $unit-width-6: 33.36vw;
 $unit-width-7: 38.92vw;
 $unit-width-8: 44.48vw;
 $unit-width-9: 50.04vw;
+$unit-width-10: 55.6vw;
+$unit-width-16: 88.96vw;
 
 //Colours
 $platinum: #D0D9D4;
@@ -20,4 +22,12 @@ $battleship-grey: #939995;
 $walnut-brown: #59554C;
 $black: #090909;
 
+//Shadow
+$boxShadow: 3px 3px 0 rgba($walnut-brown, .6);
 
+//Background Texture
+@mixin pixelBackground {
+    background-size: 4px 4px;
+    background-image: linear-gradient(90deg, transparent, transparent 3px, rgba(0,0,0,.07) 4px),
+    linear-gradient(transparent, transparent 3px, rgba(0,0,0,.07) 4px);
+}

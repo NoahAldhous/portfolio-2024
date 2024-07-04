@@ -1,0 +1,13 @@
+@use '../../../app/variables' as *;
+
+//TODO: move this into page container component for reuse!
+.container {
+    // background-color: red;
+    height: 100vh;
+    width: 100vw;
+    // padding: $unit-width-1;
+    padding-top: $unit-width-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

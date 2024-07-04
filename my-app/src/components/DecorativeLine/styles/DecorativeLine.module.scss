@@ -1,0 +1,22 @@
+@use '../../../app/variables' as *;
+
+.line {
+    width: $unit-width-quarter;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+
+    .thickLine{
+        width: 0.828vw;
+        height: 100%;
+        background-color: $battleship-grey;
+        @include pixelBackground;
+    }
+
+    .thinLine{
+        width: 0.278vw;
+        height: 100%;
+        background-color: $battleship-grey;
+    }
+}
