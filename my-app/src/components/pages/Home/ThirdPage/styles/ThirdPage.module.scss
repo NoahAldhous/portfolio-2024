@@ -15,21 +15,22 @@
         align-items: flex-end;
         
             .lineContainer{
-                height: $unit-width-4-and-a-half;
+                height: $unit-width-5;
             }
 
             .lineSpace{
-                height: $unit-width-4-and-a-half;
-                width: $unit-width-1-and-a-half;
-                padding-left: $unit-width-three-quarters;
+                height: $unit-width-5;
+                width: $unit-width-1;
+                padding-left: $unit-width-half;
+                // border: 1px solid red
             }
 
             .experienceContainer{
-                height: $unit-width-4-and-a-half;
+                height: $unit-width-5;
                 width: $unit-width-15;
                 // border: 1px solid orange;
                 display: flex;
-                justify-content: space-between;
+                justify-content: flex-start;
 
                 .experienceListContainer{
                     width: $unit-width-4;
@@ -63,13 +64,13 @@
                             margin-top: $unit-width-eighth;
                             padding-left: $unit-width-quarter;
                             transition: width;
-                            transition-duration: 500ms;
+                            transition-duration: 300ms;
                             cursor: pointer;
                             box-shadow: $boxShadow;
                             @include pixelBackground;
     
                             &:hover {
-                                width: $unit-width-4-and-three-quarters;
+                                width: $unit-width-4-and-a-half;
                             }
                         }
                     }
@@ -94,7 +95,7 @@
 
                         .experienceInfo {
                             width: 100%;
-                            height: $unit-width-1-and-a-half;
+                            height: $unit-width-2;
                             // background-color: red;
                             position: relative;
                             border-bottom: 2px solid $walnut-brown;
@@ -130,6 +131,7 @@
 
                             .relevantProjectsTitle {
                                 padding-left: $unit-width-quarter;
+                                // border: 1px solid green
                             }
 
                             .relevantProjectsList {
@@ -147,13 +149,13 @@
                                     margin-top: $unit-width-eighth;
                                     padding-left: $unit-width-quarter;
                                     transition: width;
-                                    transition-duration: 500ms;
+                                    transition-duration: 300ms;
                                     cursor: pointer;
                                     box-shadow: $boxShadow;
                                     @include pixelBackground;
             
                                     &:hover {
-                                        width: $unit-width-4-and-three-quarters;
+                                        width: $unit-width-4-and-a-half;
                                     }
                                 }
                             }
@@ -163,14 +165,15 @@
                 }
 
                 .projectCardContainer {
-                    width: $unit-width-4;
+                    width: $unit-width-5;
                     height: 100%;
                     display: flex;
                     justify-content: flex-end;
                     
                     .projectCard {
                         background-color: $eggshell;
-                        width: $unit-width-4;
+                        @include pixelBackground;
+                        width: 100%;
                         position: relative;
                     }
 
@@ -182,45 +185,6 @@
                 }
             }
 
-
-        .developmentCardContent {
-            height: 100%;
-            width: $unit-width-4;
-            background-color: $eggshell;
-            box-shadow: $boxShadow;
-            @include pixelBackground;
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            
-            // padding-top: $unit-width-half;
-
-            .developmentCardTitle {
-                @include cardTitle;
-            }
-
-            .developmentCardDescription {
-                width: $unit-width-3-and-a-half;
-                height: $unit-width-2;
-                border-bottom: 2px solid $walnut-brown;
-                padding-top: $unit-width-half;
-                font-size: smaller;
-            }
-
-            .developmentCardImage {
-                width: $unit-width-3-and-a-half;
-                height: $unit-width-2-and-a-half;
-                border-bottom: 2px solid $walnut-brown;
-            }
-
-            .developmentCardLinks {
-                width: $unit-width-3-and-a-half;
-                height: $unit-width-1-and-a-half;
-            }
-        }
     }
 
     .bottomButtonContainer {
@@ -240,7 +204,7 @@
             
             .projectButtonContainer {
                 height: 100%;
-                width: $unit-width-4;
+                width: $unit-width-5;
                 display: flex;
                 justify-content: space-between;
 
