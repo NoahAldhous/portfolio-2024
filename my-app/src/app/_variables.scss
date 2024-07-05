@@ -2,20 +2,27 @@
 //Unit Measurements
 $unit-width-1: 5.555vw;
 $unit-width-1-and-a-half: 5.555vw * 1.5;
+$unit-width-eighth: $unit-width-1 / 8;
 $unit-width-quarter: $unit-width-1 / 4;
-$unit-width-icon: $unit-width-1 / 2.47;
+$unit-width-three-quarters: $unit-width-1 * 0.75;
 $unit-width-half: $unit-width-1 / 2;
+$unit-width-icon: $unit-width-1 / 2.47;
 $unit-width-2: $unit-width-1 * 2;
 $unit-width-2-and-a-half: $unit-width-1 * 2.5;
 $unit-width-3-and-a-half: $unit-width-1 * 3.5;
 $unit-width-3: $unit-width-1 * 3;
 $unit-width-4: $unit-width-1 * 4;
+$unit-width-4-and-a-half: $unit-width-1 * 4.5;
+$unit-width-4-and-three-quarters: $unit-width-1 * 4.75;
 $unit-width-5: $unit-width-1 * 5;
+$unit-width-5-and-a-half: $unit-width-1 * 5.5;
 $unit-width-6: $unit-width-1 * 6;
+$unit-width-6-and-a-half: $unit-width-1 * 6.5;
 $unit-width-7: $unit-width-1 * 7;
 $unit-width-8: $unit-width-1 * 8;
 $unit-width-9: $unit-width-1 * 9;
 $unit-width-10: $unit-width-1 * 10;
+$unit-width-15: $unit-width-1 * 15;
 $unit-width-16: $unit-width-1 * 16;
 
 // $unit-width-1: 10vh;
