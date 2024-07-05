@@ -1,0 +1,131 @@
+@use "../../../../../app/variables" as *;
+
+.main {
+    // border: 1px solid red;
+    width: $unit-width-16;
+    max-height: 80vh;
+    aspect-ratio: 16 / 7;
+
+    .contentContainer {
+        width: 100%;
+        height: 85.71%;
+        // background-color: blue;
+        display: flex;
+        justify-content: space-between;
+
+        .textContent {
+            height: 100%;
+            // background-color: green;
+            width: $unit-width-10;
+
+            .subHeaderContainer {
+                height: $unit-width-1;
+                display: flex;
+                align-items: center;
+                // border: 1px solid blue;
+
+                .subHeader{
+                    text-transform: uppercase;
+                    font-size: $unit-width-half;
+                    text-shadow: .3rem .3rem 0 $battleship-grey;
+                }
+            }
+
+            .introTextContainer{
+                height: $unit-width-4;
+                width: $unit-width-10;
+                // border: 1px solid orange;
+                display: flex;
+                justify-content: space-between;
+
+                .introText{
+                    height: 100%;
+                    width: $unit-width-9;
+                    background-color: $eggshell;
+                    box-shadow: $boxShadow;
+                    @include pixelBackground;
+                }
+            }
+        }
+
+        .cardContent {
+            height: 100%;
+            width: $unit-width-4;
+            background-color: $eggshell;
+            box-shadow: $boxShadow;
+            @include pixelBackground;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: $unit-width-half;
+
+            .cardTitle {
+                width: 100%;
+                height: $unit-width-quarter;
+                background-color: $walnut-brown;
+                @include pixelBackground;
+                position: absolute;
+                top: 0;
+            }
+
+            .cardImage {
+                width: $unit-width-3;
+                height: $unit-width-3;
+                background-color: $platinum;
+            }
+
+            .cardText {
+                width: $unit-width-3-and-a-half;
+                height: $unit-width-2;
+                padding: $unit-width-quarter;
+                border-top: 2px solid $walnut-brown;
+            }
+        }
+    }
+
+    .bottomButtonContainer {
+        width: 100%;
+        height: $unit-width-1;
+        // background-color: yellow;
+        display: flex;
+        align-items: flex-end;
+
+        .currentTextBar {
+            height: $unit-width-half;
+            width: $unit-width-10;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            .currentText {
+                width: $unit-width-9;
+                height: 100%;
+                line-height: $unit-width-half;
+                font-size: $unit-width-quarter;
+                background-color: $eggshell;
+                box-shadow: $boxShadow;
+                @include pixelBackground;
+            }
+        }
+
+        .contactButtonContainer {
+            height: $unit-width-half;
+            width: $unit-width-6;
+            display: flex;
+            justify-content: flex-end;
+
+            .contactButton {
+                width: $unit-width-4;
+                height: 100%;
+                background-color: $eggshell;
+                box-shadow: $boxShadow;
+                @include pixelBackground;
+                
+            }
+        }
+    }
+}

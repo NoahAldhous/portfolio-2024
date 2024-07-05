@@ -1,0 +1,135 @@
+@use "../../../../../app//variables" as *;
+
+.main {
+    // border: 1px solid red;
+    width: $unit-width-16;
+    max-height: 80vh;
+    aspect-ratio: 16 / 7;
+
+    .contentContainer {
+        width: 100%;
+        height: 85.71%;
+        // background-color: blue;
+        display: flex;
+        justify-content: space-between;
+
+        .textContent {
+            height: 100%;
+            // background-color: green;
+            width: $unit-width-10;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .latestProjectContainer{
+                height: $unit-width-4;
+                width: $unit-width-10;
+                // border: 1px solid orange;
+                display: flex;
+                justify-content: space-between;
+
+                .latestProjectCard{
+                    height: 100%;
+                    width: $unit-width-9;
+                    background-color: $eggshell;
+                    box-shadow: $boxShadow;
+                    @include pixelBackground;
+                    position: relative;
+                    z-index: 2;
+
+                    .latestProjectTitle {
+                        @include cardTitle;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+
+        .developmentCardContent {
+            height: 100%;
+            width: $unit-width-4;
+            background-color: $eggshell;
+            box-shadow: $boxShadow;
+            @include pixelBackground;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            
+            // padding-top: $unit-width-half;
+
+            .developmentCardTitle {
+                @include cardTitle;
+            }
+
+            .developmentCardDescription {
+                width: $unit-width-3-and-a-half;
+                height: $unit-width-2;
+                border-bottom: 2px solid $walnut-brown;
+                padding-top: $unit-width-half;
+                font-size: smaller;
+            }
+
+            .developmentCardImage {
+                width: $unit-width-3-and-a-half;
+                height: $unit-width-2-and-a-half;
+                border-bottom: 2px solid $walnut-brown;
+            }
+
+            .developmentCardLinks {
+                width: $unit-width-3-and-a-half;
+                height: $unit-width-1-and-a-half;
+            }
+        }
+    }
+
+    .bottomButtonContainer {
+        width: 100%;
+        height: $unit-width-1;
+        // background-color: yellow;
+        display: flex;
+        align-items: flex-end;
+
+        .latestProjectButtonContainer {
+            height: $unit-width-half;
+            width: $unit-width-10;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            .projectButton {
+                height: 100%;
+                width: $unit-width-2-and-a-half;
+            }
+            
+            
+
+        }
+
+        .developmentButtonContainer {
+            height: $unit-width-half;
+            width: $unit-width-4;
+            margin-left: $unit-width-2;
+            display: flex;
+            justify-content: space-between;
+            // border: 1px solid blue;
+
+            .developmentButton {
+                width: $unit-width-1-and-a-half;
+                height: 100%;
+                background-color: $eggshell;
+                box-shadow: $boxShadow;
+                @include pixelBackground;
+                
+                &:hover {
+                    background-color: $battleship-grey;
+                    color: $eggshell;
+                }
+            }
+        }
+    }
+}

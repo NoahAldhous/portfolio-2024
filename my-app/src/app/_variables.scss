@@ -1,10 +1,13 @@
 
 //Unit Measurements
-$unit-width-1: 5.56vw;
+$unit-width-1: 5.555vw;
+$unit-width-1-and-a-half: 5.555vw * 1.5;
 $unit-width-quarter: $unit-width-1 / 4;
 $unit-width-icon: $unit-width-1 / 2.47;
 $unit-width-half: $unit-width-1 / 2;
 $unit-width-2: $unit-width-1 * 2;
+$unit-width-2-and-a-half: $unit-width-1 * 2.5;
+$unit-width-3-and-a-half: $unit-width-1 * 3.5;
 $unit-width-3: $unit-width-1 * 3;
 $unit-width-4: $unit-width-1 * 4;
 $unit-width-5: $unit-width-1 * 5;
@@ -32,4 +35,16 @@ $boxShadow: 3px 3px 0 rgba($walnut-brown, .6);
     background-size: 4px 4px;
     background-image: linear-gradient(90deg, transparent, transparent 3px, rgba(0,0,0,.07) 4px),
     linear-gradient(transparent, transparent 3px, rgba(0,0,0,.07) 4px);
+}
+
+//Card Titles
+@mixin cardTitle {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-transform: capitalize;
+    background-color: $walnut-brown;
+    padding: 0 $unit-width-quarter;
+    color: $eggshell;
+    @include pixelBackground;
 }

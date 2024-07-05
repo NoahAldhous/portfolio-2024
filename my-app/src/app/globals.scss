@@ -23,14 +23,13 @@ body {
 
   ::-webkit-scrollbar {
     width: $unit-width-quarter;
-    z-index: 10;
   }
-    ::-webkit-scrollbar-track {
-    background: $eggshell;
+  ::-webkit-scrollbar-track {
+    background: $battleship-grey;
     @include pixelBackground;
   }
-    ::-webkit-scrollbar-thumb {
-    background: $battleship-grey;
+  ::-webkit-scrollbar-thumb {
+    background: $eggshell;
     @include pixelBackground;
     
   }

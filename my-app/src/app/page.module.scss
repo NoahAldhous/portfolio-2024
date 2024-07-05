@@ -2,8 +2,6 @@
 .home {
     width: 100vw;
     height: 100vh;
-    scroll-snap-type: y proximity;
-    scroll-behavior: smooth;
     overflow-y: scroll;
     overflow-x: hidden;
 
@@ -61,6 +59,35 @@
                 background-color: $eggshell;
                 box-shadow: $boxShadow;
                 @include pixelBackground;
+                position: relative;
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: $unit-width-half;
+
+                .cardTitle {
+                    width: 100%;
+                    height: $unit-width-quarter;
+                    background-color: $walnut-brown;
+                    @include pixelBackground;
+                    position: absolute;
+                    top: 0;
+                }
+
+                .cardImage {
+                    width: $unit-width-3;
+                    height: $unit-width-3;
+                    background-color: $platinum;
+                }
+
+                .cardText {
+                    width: $unit-width-3-and-a-half;
+                    height: $unit-width-2;
+                    padding: $unit-width-quarter;
+                    border-top: 2px solid $walnut-brown;
+                }
             }
         }
     
