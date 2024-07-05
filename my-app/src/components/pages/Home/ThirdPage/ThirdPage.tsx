@@ -62,7 +62,7 @@ export default function ThirdPage(){
     <main className={styles.main}>
       <section className={styles.contentContainer}>
         <div className={styles.lineContainer}>
-            <DecorativeLine/>
+            <DecorativeLine  color=""/>
         </div>
         <section className={styles.experienceContainer}>
             <section className={styles.experienceListContainer}>
@@ -78,7 +78,7 @@ export default function ThirdPage(){
                 </ul>
             </section>
             <section className={styles.lineSpace}>
-                <DecorativeLine/>  
+                <DecorativeLine  color="walnut"/>  
             </section>
             <div className={styles.projectContainer}>
                 <div className={styles.experienceDisplay}>
@@ -108,7 +108,7 @@ export default function ThirdPage(){
                 </div>
             </div>
             <section className={styles.lineSpace}>
-                <DecorativeLine/>  
+                <DecorativeLine color="walnut"/>  
             </section>
             <section  className={styles.projectCardContainer}>
                 <div className={styles.projectCard}>
@@ -121,7 +121,7 @@ export default function ThirdPage(){
       </section>
       <section className={styles.bottomButtonContainer}>
         <section className={styles.latestProjectButtonContainer}>
-          <DecorativeLine/>
+          <DecorativeLine  color=""/>
           <section className={styles.projectButtonContainer}>
             <div className={styles.projectButton}>
                 <Button text="Github Repo"/>

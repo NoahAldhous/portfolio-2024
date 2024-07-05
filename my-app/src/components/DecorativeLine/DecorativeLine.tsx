@@ -1,8 +1,12 @@
 import styles from "./styles/DecorativeLine.module.scss";
 
-export default function DecorativeLine(){
+type Props = {
+    color: any
+}
+
+export default function DecorativeLine({color}: Props){
     return <div className={styles.line}>
-        <div className={styles.thickLine}/>
-        <div className={styles.thinLine}/>
+        <div className={`${styles.thickLine} ${color == "walnut" ? styles.walnut : ""} `}/>
+        <div className={`${styles.thinLine} ${color == "walnut" ? styles.walnut : ""} `}/>
     </div>
 }
