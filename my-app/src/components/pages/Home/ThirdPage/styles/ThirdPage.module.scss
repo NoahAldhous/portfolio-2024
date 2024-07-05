@@ -70,7 +70,17 @@
                             @include pixelBackground;
     
                             &:hover {
-                                width: $unit-width-4-and-a-half;
+                                width: $unit-width-4-and-a-quarter;
+                            }
+                        }
+
+                        .activeButton{
+                            width: $unit-width-4-and-a-half;
+                            background-color: $walnut-brown;
+                            color: $eggshell;
+
+                            &:hover {
+                                width:$unit-width-4-and-a-half
                             }
                         }
                     }
@@ -155,7 +165,17 @@
                                     @include pixelBackground;
             
                                     &:hover {
-                                        width: $unit-width-4-and-a-half;
+                                        width: $unit-width-4-and-a-quarter;
+                                    }
+                                }
+
+                                .activeButton{
+                                    width: $unit-width-4-and-a-half;
+                                    background-color: $walnut-brown;
+                                    color: $eggshell;
+        
+                                    &:hover {
+                                        width:$unit-width-4-and-a-half
                                     }
                                 }
                             }

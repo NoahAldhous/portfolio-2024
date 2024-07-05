@@ -1,10 +1,64 @@
+"use client";
 import PageContainer from "@/components/PageContainer/PageContainer";
 import styles from "./styles/ThirdPage.module.scss";
 import DecorativeLine from "@/components/DecorativeLine/DecorativeLine";
 import Button from "@/components/Button/Button";
+import { useState } from "react";
 
 export default function ThirdPage(){
-    return <PageContainer>
+
+    
+    function selectExperience(title:string, index: number){
+        setActiveExperience(title);
+        setActiveProjectArray(dataArray[index].projects);
+        setActiveProject(dataArray[index].projects[0].title)
+    }
+
+    function selectProject(title:string){
+        setActiveProject(title)
+    }
+    
+    const dataArray = [
+        {
+            title: "adomuka",
+            projects: [
+                {
+                    title: "Infinita Productions",
+                },
+                {
+                    title: "Matt's App",
+                },
+            ]
+        },
+        {
+            title: "freelance developer",
+            projects: [
+                {
+                    title: "Mobile Mysteries",
+                },
+                {
+                    title: "Ruby Parker Photography",
+                },
+            ]
+        },
+        {
+            title: "school of code",
+            projects: [
+                {
+                    title: "Just My Type",
+                },
+                {
+                    title: "Jungle Sums",
+                }
+            ]
+        }
+    ]
+
+    const [activeExperience, setActiveExperience] = useState(dataArray[0].title)
+    const [activeProjectArray, setActiveProjectArray] = useState(dataArray[0].projects)
+    const [activeProject, setActiveProject] = useState(dataArray[0].projects[0].title)
+    
+    return (<PageContainer>
     <main className={styles.main}>
       <section className={styles.contentContainer}>
         <div className={styles.lineContainer}>
@@ -16,15 +70,11 @@ export default function ThirdPage(){
                     <div className={styles.experienceListTitle}>
                         <p>Experience</p>
                     </div>
-                    <li className={styles.experienceItem}>
-                        Adomuka
-                    </li>
-                    <li className={styles.experienceItem}>
-                        Freelance Developer
-                    </li>
-                    <li className={styles.experienceItem}>
-                        School of Code
-                    </li>
+                    {dataArray.map((item, index) =>
+                        <li key={index} className={`${styles.experienceItem} ${activeExperience ==  item.title ? styles.activeButton : ""}`} onClick={()=> selectExperience(item.title, index)}>
+                            {item.title}
+                        </li>
+                    )}
                 </ul>
             </section>
             <section className={styles.lineSpace}>
@@ -34,7 +84,7 @@ export default function ThirdPage(){
                 <div className={styles.experienceDisplay}>
                     <div className={styles.experienceInfo}>
                         <div className={styles.experienceTitle}>
-                            <p>Freelance Developer</p>
+                            <p>{activeExperience}</p>
                             <p className={styles.experienceDate}>24.03.2023</p>
                         </div>
                         <p className={styles.experienceText}>
@@ -48,15 +98,11 @@ export default function ThirdPage(){
                             Projects
                         </div>
                         <ul className={styles.relevantProjectsList}>
-                            <li className={styles.relevantProjectItem}>
-                                Infinita Productions
-                            </li>
-                            <li className={styles.relevantProjectItem}>
-                                Infinita Productions
-                            </li>
-                            <li className={styles.relevantProjectItem}>
-                                Infinita Productions
-                            </li>
+                            {activeProjectArray.map((item,index) =>
+                                <li key={index} className={`${styles.relevantProjectItem} ${activeProject ==  item.title ? styles.activeButton : ""}`} onClick={() => selectProject(item.title)}>
+                                    {item.title}
+                                </li>
+                            )}
                         </ul>
                     </section>
                 </div>
@@ -67,7 +113,7 @@ export default function ThirdPage(){
             <section  className={styles.projectCardContainer}>
                 <div className={styles.projectCard}>
                     <div className={styles.projectTitle}>
-                    <p>Infinita Productions</p>
+                    <p>{activeProject}</p>
                     </div>
                 </div>
             </section>
@@ -87,5 +133,5 @@ export default function ThirdPage(){
         </section>
       </section>
     </main>
-  </PageContainer>
+  </PageContainer>)
 }
