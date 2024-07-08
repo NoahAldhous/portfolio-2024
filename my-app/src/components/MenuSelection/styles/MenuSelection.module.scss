@@ -1,0 +1,55 @@
+@use "../../../app/variables" as *;
+
+.menuContainer{
+    width: 100%;
+    height: 100%;
+    // background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+
+    .menuList {
+        height: 100%;
+        width: $unit-width-4;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // background-color: aliceblue;
+
+        .menuTitle {
+            @include cardTitle;
+            width: $unit-width-4;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .menuItem {
+            text-transform: capitalize;
+            width: $unit-width-4;
+            height: $unit-width-half;
+            line-height: $unit-width-half;
+            background-color: $eggshell;
+            margin-top: $unit-width-eighth;
+            padding-left: $unit-width-quarter;
+            transition: width;
+            transition-duration: 300ms;
+            cursor: pointer;
+            box-shadow: $boxShadow;
+            @include pixelBackground;
+
+            &:hover {
+                width: $unit-width-4-and-a-quarter;
+            }
+        }
+
+        .activeButton{
+            width: $unit-width-4-and-a-half;
+            background-color: $walnut-brown;
+            color: $eggshell;
+
+            &:hover {
+                width:$unit-width-4-and-a-half
+            }
+        }
+    }
+}

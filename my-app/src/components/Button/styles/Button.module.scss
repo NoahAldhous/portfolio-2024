@@ -64,7 +64,7 @@
     }
 
     &:hover .line {
-        width: 94%;
+        width: 95%;
         
         .thickLine {
             background-color: $eggshell;
@@ -74,12 +74,12 @@
             
             .upperThinLine {
                 background-color: $eggshell;
-                transform: rotate(-45deg) translateY(30%);
+                // transform: rotate(-45deg) translateY(30%);
             }
 
             .lowerThinLine {
                 background-color: $eggshell;
-                transform: rotate(45deg) translateY(-30%);
+                // transform: rotate(45deg) translateY(-30%);
             }
         }
     }
