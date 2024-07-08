@@ -1,26 +1,31 @@
+"use client";
+
 import DecorativeLine from "../DecorativeLine/DecorativeLine"
 import styles from "./styles/Navbar.module.scss"
+import Link from "next/link";
 
 export default function Navbar(){
     return <div className={styles.navbar}>
-        <DecorativeLine color=""/>
+        <div className={styles.navTextContainer}>
+            <DecorativeLine color=""/>
+            <p className={styles.navText}>home</p>
+        </div>
         <div className={styles.buttonContainer}>
-            <button className={styles.navButton}>
-                Button
-            </button>
-            <button className={styles.navButton}>
-                Button
-            </button>
-            <button className={styles.navButton}>
-                Button
-            </button>
+            <Link href="/" className={styles.navButton}>
+                Home
+            </Link>
+            <Link href="/about" className={styles.navButton}>
+                About
+            </Link>
+            <Link href="/work" className={styles.navButton}>
+                Work
+            </Link>
             <button className={styles.navIcon}>
                 Icon
             </button>
             <button className={styles.navIcon}>
                 Icon
             </button>
-
         </div>
     </div>
 }
