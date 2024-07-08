@@ -16,7 +16,7 @@ export default function FirstPage(){
                 </h2>
               </section>
               <section className={styles.introTextContainer}>
-                <DecorativeLine/>
+                <DecorativeLine color=""/>
                 <p className={styles.introText}>
                   intro text
                 </p>
@@ -38,7 +38,7 @@ export default function FirstPage(){
           </section>
           <section className={styles.bottomButtonContainer}>
             <section className={styles.currentTextBar}>
-              <DecorativeLine/>
+              <DecorativeLine color=""/>
               <p className={styles.currentText}>
                 Noah is currently...
               </p>

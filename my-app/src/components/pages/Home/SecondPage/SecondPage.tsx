@@ -10,7 +10,7 @@ export default function SecondPage(){
       <section className={styles.contentContainer}>
         <section className={styles.textContent}>
           <section className={styles.latestProjectContainer}>
-            <DecorativeLine/>
+            <DecorativeLine color=""/>
             <div className={styles.latestProjectCard}>
               <div className={styles.latestProjectTitle}>
                 <p>Latest Project</p>
@@ -40,7 +40,7 @@ export default function SecondPage(){
       </section>
       <section className={styles.bottomButtonContainer}>
         <section className={styles.latestProjectButtonContainer}>
-          <DecorativeLine/>
+          <DecorativeLine color=""/>
           <div className={styles.projectButton}>
             <Button text="Github Repo"/>
           </div>
