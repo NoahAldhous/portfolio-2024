@@ -1,0 +1,19 @@
+@use "../../../app//variables" as *;
+
+.navButton {
+    width: $unit-width-2;
+    height: $unit-width-half;
+    background-color: $platinum;
+    @include pixelBackground;
+    box-shadow: $boxShadow;
+    color: $black;
+
+    &:hover {
+        color: $eggshell;
+    }
+}
+
+.activeButton {
+    background-color: $walnut-brown;
+    color: $eggshell;
+}

@@ -3,15 +3,39 @@
 import DecorativeLine from "../DecorativeLine/DecorativeLine"
 import styles from "./styles/Navbar.module.scss"
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import NavButton from "./NavButton";
 
 export default function Navbar(){
-    return <div className={styles.navbar}>
+
+    const getPathname = usePathname()
+
+    const buttonArray = [
+        {
+            name: "Home",
+            link: "/", 
+        },
+        {
+            name: "About",
+            link: "/about", 
+        },
+        {
+            name: "Work",
+            link: "/work", 
+        },
+    ]
+
+    return (<div className={styles.navbar}>
         <div className={styles.navTextContainer}>
             <DecorativeLine color=""/>
-            <p className={styles.navText}>home</p>
+            <p className={styles.navText}>{getPathname == "/" ? "Home" : getPathname.substring(1)}</p>
         </div>
         <div className={styles.buttonContainer}>
-            <Link href="/" className={styles.navButton}>
+            {buttonArray.map((item,index) =>
+                <NavButton key={index} name={item.name} link={item.link}/>
+            )}
+            {/* <Link href="/" className={styles.navButton}>
                 Home
             </Link>
             <Link href="/about" className={styles.navButton}>
@@ -19,7 +43,7 @@ export default function Navbar(){
             </Link>
             <Link href="/work" className={styles.navButton}>
                 Work
-            </Link>
+            </Link> */}
             <button className={styles.navIcon}>
                 Icon
             </button>
@@ -27,5 +51,5 @@ export default function Navbar(){
                 Icon
             </button>
         </div>
-    </div>
+    </div>)
 }
